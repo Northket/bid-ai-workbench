@@ -1,0 +1,97 @@
+/* 全局样式补充：侧边栏品牌区、滚动条、页面动效 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #c8d2e0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #aab8cc;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 16px;
+  height: 64px;
+  color: #fff;
+}
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #1f6fe0 0%, #0c3f8f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  flex: none;
+  box-shadow: 0 2px 8px rgba(12, 63, 143, 0.5);
+}
+.brand-text {
+  line-height: 1.25;
+  overflow: hidden;
+}
+.brand-text b {
+  display: block;
+  font-size: 15px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.brand-text span {
+  display: block;
+  font-size: 11px;
+  color: #7f93b3;
+  white-space: nowrap;
+}
+
+.page-fade {
+  animation: pageFade 0.25s ease;
+}
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.stat-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.chat-bubble {
+  max-width: 100%;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.7;
+}
+
+.demo-note {
+  background: #fffbe6;
+  border: 1px solid #ffe58f;
+  border-radius: 6px;
+  padding: 8px 12px;
+  color: #614700;
+  font-size: 13px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}

@@ -1,0 +1,40 @@
+# 依赖与虚拟环境（不入库，按 requirements.txt / package-lock.json 重装）
+backend/venv/
+frontend/node_modules/
+
+# 构建产物（启动脚本会按需重建）
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+frontend/node_modules/.vite/
+
+# 运行数据（业务数据与用户文件，严禁入库/删除）
+# backend/data/ 内含约 2460 条真实解析数据；uploads/ 内含真实招标文件；backups/ 内含数据库快照
+backend/data/
+backend/uploads/
+backend/backups/
+*.db-wal
+*.db-shm
+
+# 日志与临时文件
+*.log
+backend/acc-server.log
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# 敏感配置与密钥（当前不存在，预防性排除）
+.env
+.env.*
+*.pem
+*.key
+
+# IDE 本机配置（可能含本机路径等敏感数据，如需共享请自行反向排除）
+.idea/
+.vscode/
+
+# 本地审计留存（含真实机构名称清单，严禁入库；如需入库请先脱敏并删除本行）
+GIT_INITIALIZATION_RESULT.md
+
+# 系统文件
+Thumbs.db
+.DS_Store
